@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width:100%;
+        }
+        ul{
+            list-style-type: none;;
+        }
+        #topnav>ul{
+            display:flex;
+            list-style-type: none;
+            justify-content: end;
+        }
+        #topnav>ul li{
+            margin:0px 60px;
+            font-size: 18px;;
+        }
+        #midnav{
+            height:auto;
+            width:100vh;
+            text-align:center;
+            padding: 10px 0px;
+            font-size: 22px
+        }
+        #midnav>img{
+            width:50%;
+            height:100%;
+            border:1px solid red;
+        }
+        #midnav>a{
+            text-decoration: none;
+            margin:0px 30px;
+        }
+        #midnav>h1{
+            display:inline;
+        }
+        #bottomnav>ul{
+            border:1px solid none;
+            display:flex;
+            width:70%;
+            list-style-type: none;
+            justify-content:space-evenly;
+            font-size:20px;   
+        }
+        .navbar{
+            background-color: #086DFF;
+            color:white;
+        }
+        #mid{
+            width:80%;
+            margin:auto;
+            display:flex;
+            justify-content: space-between;
+        }
+        /* #mid *{
+            border:1px solid red;
+            margin:3px
+        } */
+        /* #mid>div>div{
+            display:flex;
+        } */
+        #mid img{
+            width:100%;
+            height:100%;
+        }
+        #mid>div{
+            height:500px;
+            width:49%;
+            /* border:1px solid red; */
+           
+        }
+        #mid>div:nth-child(2){
+            background-color: azure;
+            padding-left:10px;
+        }
+        #trenddiv>div{
+            display:flex;
+            justify-content: space-between;
+        }
+        #trenddiv>div>div{
+            width:30%;
+        }
+        #trenddiv>div>div>img{
+            width:100%;
+        }
+        #trenddiv{
+            width:80%;
+            margin:auto;
+        }
+        #footf{
+            display:flex;
+        }
+        #footf a{
+            text-decoration:none;
+        }
+        #footer>div{
+            width:80%;
+            margin:auto;
+            text-align: center;
+        }
+        #footer{
+            background-color: #F1F6FC;
+        }
+        #cyc>div>img{
+            height:70%;
+            width:100%;
+        }
+        #cyc>div>h5{
+            text-decoration: line-through;
+        }
+        #cyc{
+            width:99%;
+            padding:5px;
+            height:auto;
+            display:grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+            gap:10px;
+        }
+        #cyc>div>*{
+            margin:0px;
+            padding:0px;
+        }
+        /* #cyc>*{
+            
+            
+        } */
+        #newforyou{
+            width:80%;
+            margin:auto;
+            background-color:aliceblue ;
+        }
+        #tri{
+            width:100%;
+            display:flex;
+            justify-content: space-evenly;
+        }
+        #tri>div{
+            width:19%;
+            background-color: white;
+            margin:8px;
+        }
+        #tri>div>h5{
+            text-decoration: line-through;
+        }
+        #tri>div>img{
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div id="topnav">
+            <ul>
+                <li>Save BIG with our app!</li>
+                <li>Language</li>
+                <li>Support Center</li>
+            </ul>
+        </div>
+        <hr>
+        <div id="midnav">
+            <h1>Shopfrog</h1>
+            <!-- <img src="https://www.bing.com/th?id=OIP.EJB7pKGWux0ANscWFU0H_AAAAA&w=259&h=86&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt=""> -->
+            <select name="category" id="allcat">
+                <option value="">All Categories</option>
+                <option value="">Smart home & Garden</option>
+            </select>
+            <input type="text">
+            <a href="">Sign in</a>
+            <a href="">cart</a>
+        </div>
+        <div id="bottomnav">
+            <ul>
+                <li>Categories</li>
+                <li>New</li>
+                <li>Bestselling</li>
+                <li>Brand</li>
+                <li>Clearance</li>
+                <li>Deal</li>
+                <li>Coupon</li>
+                <li>App only</li>
+                <li><img src="https://img.gkbcdn.com/s3/bn/2209/174x35b-631b1e9b2b40c9215c578605.gif" alt=""></li>
+            </ul>
+        </div>
+    </div>
+    <div id="mid">
+        <div>
+            <img src="https://img.gkbcdn.com/bn/2211/740x670-63647c282b40c94fac2af425._p1_.jpg" alt="">
+        </div>
+        <div>
+            <h1>Deal of the Day</h1>
+            <div id="cyc">
+                
+            </div>
+        </div>
+    </div>
+    <div id="trenddiv">
+        <h1>Trending Categories</h1>
+        <div>
+            <div>
+                <img src="https://img.gkbcdn.com/bn/2205/488x274-628f63522b40c91f8cd3699a._p1_.jpg" alt="">
+                <h3>Smart Home & Garden</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel voluptatum non quae tenetur id saepe!</p>
+            </div>
+            <div>
+                <img src="https://img.gkbcdn.com/bn/2205/488x2743-628f62882b40c91f8cd36998._p1_.jpg" alt="">
+                <h3>E-transport</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At similique neque natus quisquam odit nam!</p>
+            </div>
+            <div>
+                <img src="https://img.gkbcdn.com/bn/2205/488x2743-628f62882b40c91f8cd36998._p1_.jpg" alt="">
+                <h3>3D Printers</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto sit eum quibusdam, quis omnis vitae?</p>
+            </div>
+        </div>
+    </div>
+    <div id="newforyou">
+        <h1>New for You</h1>
+        <div id="tri">
+
+        </div>
+    </div>
+    <div id="footer">
+        <div>
+            <div><h1>Why buy from shopfrog?</h1></div>
+            <div>
+                <input type="text">
+                <input type="submit">
+            </div>
+            <div id="footf">
+                <ul>
+                    <a href=""><li><strong>Help</strong></li></a>
+                    <a href=""><li>Order status</li></a>
+                    <a href=""><li>About us</li></a>
+                    <a href=""><li>Contact us</li></a>
+                    <a href=""><li>Warranty</li></a>
+                    <a href=""><li>FAQs</li></a>
+                    <a href=""><li>Sitemap</li></a>
+                </ul>
+                <ul>
+                    <a href=""><li><strong>Support</strong></li></a>
+                    <a href=""><li>WhatShopfrog</li></a>
+                    <a href=""><li>Shipping guide</li></a>
+                    <a href=""><li>Payment information</li></a>
+                    <a href=""><li>Wholesale</li></a>
+                    <a href=""><li>Drop shipping</li></a>
+                    <a href=""><li>Blog</li></a>
+                    <a href=""><li>Affiliates</li></a>
+                </ul>
+                <ul>
+                    <a href=""><li><strong>Policies</strong></li></a>
+                    <a href=""><li>Terms & conditions</li></a>
+                    <a href="">  <li>Return policy</li></a>
+                    <a href=""><li>Private</li></a>
+                    <a href=""><li>Declaration</li></a>
+                    <a href=""><li>Customs</li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="sam" style="display:flex">
+
+    </div>
+</body>
+</html>
+<script>
+    fetch("https://recommender.scarabresearch.com/merchants/116571D43669AB19/?pv=353371885&xp=1&f=f%3APERSONAL%2Cl%3A8%2Co%3A0&cp=1&vi=64E2415F88EC3EF&p=25517%7C1667909828")
+    .then((res)=>res.json())
+    .then((res)=>{
+        let a=res.features.PERSONAL.items;
+        let b=res.products;
+            display(a,b);
+    });
+    fetch("https://recommender.scarabresearch.com/merchants/116571D43669AB19/?pv=356248641&xp=1&f=f%3ARELATED%2Cl%3A5%2Co%3A0%7Cf%3AALSO_BOUGHT%2Cl%3A5%2Co%3A0&v=i%3A17662%2Ct%3APERSONAL%2Cc%3AAAAA&cp=1&vi=64E2415F88EC3EF&p=25517%7C1667909828&prev_url=https%3A%2F%2Fwww.geekbuying.com%2F")
+    .then((res)=>res.json())
+    .then((res)=>{
+        let a=res.features.RELATED.items;
+        let b=res.products;
+            display2(a,b);
+    });
+    fetch('https://fakestoreapi.com/products/category/electronics')
+            .then(res=>res.json())
+            .then(json=>console.log(json))
+
+    function display(a,b){
+        var iddata=[];
+        for(let i=0;i<8;i++){
+            iddata.push(a[i].id);
+        }
+        iddata.forEach(ele => {
+            let d=document.createElement("div")
+            let i=document.createElement("img")
+            i.src=b[ele][3];
+            let h=document.createElement("h4")
+            h.innerText=b[ele][6];
+            let c=document.createElement("h5")
+            c.innerText=b[ele][7];
+            d.append(i,h,c)
+            document.querySelector("#cyc").append(d)
+
+        });
+    }
+    function display2(a,b){
+        var iddata2=[];
+        for(let i=0;i<5;i++){
+            iddata2.push(a[i].id);
+        }
+        iddata2.forEach(ele => {
+            let d=document.createElement("div")
+            let i=document.createElement("img")
+            i.src=b[ele][3];
+            let h=document.createElement("h4")
+            h.innerText=b[ele][6];
+            let c=document.createElement("h5")
+            c.innerText=b[ele][7];
+            d.append(i,h,c)
+            document.querySelector("#tri").append(d)
+
+        });
+    }
+
+    var products_bike_api="https://recommender.scarabresearch.com/merchants/116571D43669AB19/?pv=353371885&xp=1&f=f%3APERSONAL%2Cl%3A8%2Co%3A0&cp=1&vi=64E2415F88EC3EF&p=25517%7C1667909828";
+    var timmer_api="https://recommender.scarabresearch.com/merchants/116571D43669AB19/?pv=356248641&xp=1&f=f%3ARELATED%2Cl%3A5%2Co%3A0%7Cf%3AALSO_BOUGHT%2Cl%3A5%2Co%3A0&v=i%3A17662%2Ct%3APERSONAL%2Cc%3AAAAA&cp=1&vi=64E2415F88EC3EF&p=25517%7C1667909828&prev_url=https%3A%2F%2Fwww.geekbuying.com%2F";
+</script>

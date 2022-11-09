@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signin</title>
+    <link rel="stylesheet" href="./signuplogin.css">
+</head>
+<body>
+   <div id="nav">
+        <h1>Shopfrog</h1>
+        <img src="" alt="">
+   </div>
+   <div id="center">
+        <div>
+            <form action="">
+                <h3>Sign In</h3>
+                <input type="text" placeholder="Email address">
+                <input type="text" placeholder="Password">
+                <ul>
+                    <li>Keep me signed in</li>
+                    <a href=""><li>Forgot youy Password</li></a>
+                </ul>
+                <input type="submit"><br>
+                <input type="submit" id="cna" value="Create new account">
+                <hr>
+                <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE97U0fvgs0x-HXiYeTtCp8MDXFGuGLD8uEg&usqp=CAU" alt=""></a>
+            </form>
+        </div>    
+   </div>
+</body>
+</html>
+<script>
+    document.querySelector("#cna").addEventListener("click",clickinner);
+    function clickinner(e){
+        e.preventDefault();
+        location.href = './signup.html';
+    };
+    document.querySelector("form").addEventListener("submit",(e)=>{
+        e.preventDefault();
+        sub();
+    });
+    let arr=JSON.parse(localStorage.getItem("shopfrogUD")) || []
+    function sub(){
+    
+        var int=document.querySelectorAll("input");
+        let Email_address=int[0].value;
+        let Password=int[1].value;
+        
+        let pro=new Promise((res,rej)=>{
+            arr.filter((ele)=>{
+            if(ele.Re==Email_address){
+                if(ele.Rp==Password){
+                    res("Login Sucessful");
+                }
+                else{
+                    rej("wrong password");
+                }
+            }
+            else{
+                rej("Wrong Credentials");
+            }
+            })
+        })
+        .then((result)=>alert(result))
+        .catch((result)=>alert(result));
+        
+        
+    }
+</script>

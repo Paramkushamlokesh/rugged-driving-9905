@@ -1,0 +1,41 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+form>a>img{
+    width:30px;
+    height:30px;
+    
+}
+#nav{
+        background-color: #2887FD;
+        height:100px;
+}
+form{
+    background-color: white;
+    margin:auto;
+    padding:30px;
+    width:25%;
+    height:400px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    font-size: medium;
+}
+ul{
+    display:flex;
+    list-style-type: none;
+}
+form input{
+    width:90%;
+}
+form>input{
+    
+    padding:5px;
+    font-size: 22px;
+}
+form>*{
+    margin:8px;
+}
+#center{
+    height:100vh;
+    background-image: url('https://img.gkbcdn.com/bn/2207/750-62c525372b40c92a04c94f48._p1_.jpg') ;
+}
