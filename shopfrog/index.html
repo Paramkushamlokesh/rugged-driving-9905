@@ -6,11 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            margin:0;
+            padding:0;
+        }
         body{
             width:100%;
         }
         ul{
             list-style-type: none;;
+        }
+        #topnav{
+            padding:5px;
         }
         #topnav>ul{
             display:flex;
@@ -23,9 +30,8 @@
         }
         #midnav{
             height:auto;
-            width:100vh;
-            text-align:center;
-            padding: 10px 0px;
+            width:100%;
+            padding:15px;
             font-size: 22px
         }
         #midnav>img{
@@ -37,8 +43,15 @@
             text-decoration: none;
             margin:0px 30px;
         }
+        #midnav>h1>a{
+            
+            text-decoration:none;
+            color:white;
+        }
         #midnav>h1{
             display:inline;
+            margin-left: 5%;
+            margin-right: 5%;
         }
         #bottomnav>ul{
             border:1px solid none;
@@ -49,6 +62,7 @@
             font-size:20px;   
         }
         .navbar{
+            width:100%;
             background-color: #086DFF;
             color:white;
         }
@@ -65,6 +79,7 @@
         /* #mid>div>div{
             display:flex;
         } */
+        
         #mid img{
             width:100%;
             height:100%;
@@ -76,7 +91,7 @@
            
         }
         #mid>div:nth-child(2){
-            background-color: azure;
+            
             padding-left:10px;
         }
         #trenddiv>div{
@@ -107,30 +122,29 @@
         #footer{
             background-color: #F1F6FC;
         }
-        #cyc>div>img{
-            height:70%;
+        #cyc>div>img,#cyc2>div>img{
+            height:60%;
             width:100%;
         }
         #cyc>div>h5{
             text-decoration: line-through;
         }
-        #cyc{
+        #cyc,#cyc2{
             width:99%;
-            padding:5px;
+            border:1px solid none;
             height:auto;
-            display:grid;
-            grid-template-columns: repeat(4,1fr);
-            grid-template-rows: auto;
-            gap:10px;
+            display:flex;
+            justify-content:space-evenly;
         }
-        #cyc>div>*{
+        #cyc>div>*,#cyc2>div>*{
             margin:0px;
             padding:0px;
         }
-        /* #cyc>*{
+        #cyc>div,#cyc2>div{
+           width:20%; 
+           border:1px solid none;;
             
-            
-        } */
+        }
         #newforyou{
             width:80%;
             margin:auto;
@@ -152,6 +166,50 @@
         #tri>div>img{
             width:100%;
         }
+        #delgd{
+            width:80%;
+            margin:auto;
+            display:grid;
+            grid-template-columns: repeat(6,1fr);
+            gap:15px;
+        }
+        #delgd>div>img{
+            width:100%;
+        }
+        #delgd>div{
+            padding:10px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+        .dod{
+            font-size: 18px;
+            color:#2e2f32;
+        }
+        .lig{
+            background-color: azure;
+            padding:10px;
+            margin:10px;
+            
+        }
+        #land>*{
+            padding:20px;
+        }
+        #delgd2{
+            width:80%;
+            margin:auto;
+        }
+        #singlewin{
+            display:flex;
+            justify-content:space-evenly;
+            width:70%;
+            margin:40px auto
+        }
+        #singlewin>div{
+                width:50%;
+                height:300px;
+        }
+        #singlewin>div:nth-child(1) img{
+            width:60%;
+        }
     </style>
 </head>
 <body>
@@ -165,15 +223,15 @@
         </div>
         <hr>
         <div id="midnav">
-            <h1>Shopfrog</h1>
+            <h1><a href="./index.html">Shopfrog</a></h1>
             <!-- <img src="https://www.bing.com/th?id=OIP.EJB7pKGWux0ANscWFU0H_AAAAA&w=259&h=86&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt=""> -->
             <select name="category" id="allcat">
                 <option value="">All Categories</option>
                 <option value="">Smart home & Garden</option>
             </select>
             <input type="text">
-            <a href="">Sign in</a>
-            <a href="">cart</a>
+            <a href="./signin.html">Sign in</a>
+            <a href="./cart.html">cart</a>
         </div>
         <div id="bottomnav">
             <ul>
@@ -189,43 +247,65 @@
             </ul>
         </div>
     </div>
-    <div id="mid">
-        <div>
-            <img src="https://img.gkbcdn.com/bn/2211/740x670-63647c282b40c94fac2af425._p1_.jpg" alt="">
-        </div>
-        <div>
-            <h1>Deal of the Day</h1>
-            <div id="cyc">
-                
-            </div>
-        </div>
-    </div>
-    <div id="trenddiv">
-        <h1>Trending Categories</h1>
-        <div>
-            <div>
-                <img src="https://img.gkbcdn.com/bn/2205/488x274-628f63522b40c91f8cd3699a._p1_.jpg" alt="">
-                <h3>Smart Home & Garden</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel voluptatum non quae tenetur id saepe!</p>
-            </div>
-            <div>
-                <img src="https://img.gkbcdn.com/bn/2205/488x2743-628f62882b40c91f8cd36998._p1_.jpg" alt="">
-                <h3>E-transport</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At similique neque natus quisquam odit nam!</p>
-            </div>
-            <div>
-                <img src="https://img.gkbcdn.com/bn/2205/488x2743-628f62882b40c91f8cd36998._p1_.jpg" alt="">
-                <h3>3D Printers</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto sit eum quibusdam, quis omnis vitae?</p>
-            </div>
-        </div>
-    </div>
-    <div id="newforyou">
-        <h1>New for You</h1>
-        <div id="tri">
+    <divi id="center">
+        <div id="delgd" >
 
         </div>
-    </div>
+        <div id="delgd2" >
+
+        </div>
+        <div id="land">
+            <div id="mid">
+                <div id="slider">
+                    <img src="" alt="">  
+                 
+                </div>
+                <div>
+                    <div>
+                        <div class="lig">
+                            <h1 class="dod">Deal of the Day</h1>
+                            <div id="cyc">
+                        
+                            </div>
+                        </div>
+                        <div class="lig">
+                            <h1 class="dod">Featured Products</h1>
+                            <div id="cyc2">
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="trenddiv">
+                <h1>Trending Categories</h1>
+                <div>
+                    <div>
+                        <img src="https://img.gkbcdn.com/bn/2205/488x274-628f63522b40c91f8cd3699a._p1_.jpg" alt="">
+                        <h3>Smart Home & Garden</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel voluptatum non quae tenetur id saepe!</p>
+                    </div>
+                    <div>
+                        <img src="https://img.gkbcdn.com/bn/2205/488x2743-628f62882b40c91f8cd36998._p1_.jpg" alt="">
+                        <h3>E-transport</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At similique neque natus quisquam odit nam!</p>
+                    </div>
+                    <div>
+                        <img src="https://img.gkbcdn.com/bn/2205/488x2743-628f62882b40c91f8cd36998._p1_.jpg" alt="">
+                        <h3>3D Printers</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto sit eum quibusdam, quis omnis vitae?</p>
+                    </div>
+                </div>
+            </div>
+            <div id="newforyou">
+                <h1>New for You</h1>
+                <div id="tri">
+        
+                </div>
+            </div>
+        </div>
+        
+    </divi>
     <div id="footer">
         <div>
             <div><h1>Why buy from shopfrog?</h1></div>
@@ -270,13 +350,23 @@
 </body>
 </html>
 <script>
-    fetch("https://recommender.scarabresearch.com/merchants/116571D43669AB19/?pv=353371885&xp=1&f=f%3APERSONAL%2Cl%3A8%2Co%3A0&cp=1&vi=64E2415F88EC3EF&p=25517%7C1667909828")
-    .then((res)=>res.json())
-    .then((res)=>{
-        let a=res.features.PERSONAL.items;
-        let b=res.products;
-            display(a,b);
-    });
+    // fetch("https://recommender.scarabresearch.com/merchants/116571D43669AB19/?pv=353371885&xp=1&f=f%3APERSONAL%2Cl%3A8%2Co%3A0&cp=1&vi=64E2415F88EC3EF&p=25517%7C1667909828")
+    // .then((res)=>res.json())
+    // .then((res)=>{
+    //     let a=res.features.PERSONAL.items;
+    //     let b=res.products;
+    //         display(a,b);
+    // });
+    fetch("./dealdata.json")
+    .then((rs)=>rs.json())
+    .then((da)=>display(da.dealdata));
+
+
+    fetch("./run_results.json")
+    .then((rs)=>rs.json())
+    .then((da)=>displaycopy(da.outdoor_products));
+
+
     fetch("https://recommender.scarabresearch.com/merchants/116571D43669AB19/?pv=356248641&xp=1&f=f%3ARELATED%2Cl%3A5%2Co%3A0%7Cf%3AALSO_BOUGHT%2Cl%3A5%2Co%3A0&v=i%3A17662%2Ct%3APERSONAL%2Cc%3AAAAA&cp=1&vi=64E2415F88EC3EF&p=25517%7C1667909828&prev_url=https%3A%2F%2Fwww.geekbuying.com%2F")
     .then((res)=>res.json())
     .then((res)=>{
@@ -284,28 +374,66 @@
         let b=res.products;
             display2(a,b);
     });
-    fetch('https://fakestoreapi.com/products/category/electronics')
-            .then(res=>res.json())
-            .then(json=>console.log(json))
+    // function display(a,b){
+    //     var iddata=[];
+    //     for(let i=0;i<8;i++){
+    //         iddata.push(a[i].id);
+    //     }
+    //     iddata.forEach(ele => {
+    //         let d=document.createElement("div")
+    //         let i=document.createElement("img")
+    //         i.src=b[ele][3];
+    //         let h=document.createElement("h4")
+    //         h.innerText=b[ele][6];
+    //         let c=document.createElement("h5")
+    //         c.innerText=b[ele][7];
+    //         d.append(i,h,c)
+    //         document.querySelector("#cyc").append(d)
 
-    function display(a,b){
+    //     });
+    // }
+    function display(a){
         var iddata=[];
-        for(let i=0;i<8;i++){
-            iddata.push(a[i].id);
+        for(let i=0;i<4;i++){
+            iddata.push(a[i]);
         }
         iddata.forEach(ele => {
             let d=document.createElement("div")
+            d.addEventListener("click",dealspage);
             let i=document.createElement("img")
-            i.src=b[ele][3];
+            i.src=ele.img;
             let h=document.createElement("h4")
-            h.innerText=b[ele][6];
+            h.innerText=ele.discount;
             let c=document.createElement("h5")
-            c.innerText=b[ele][7];
+            c.innerText=ele.price;
             d.append(i,h,c)
             document.querySelector("#cyc").append(d)
 
         });
     }
+    function displaycopy(a){
+        
+        var iddata=[];
+        for(let i=0;i<4;i++){
+            iddata.push(a[i]);
+        }
+        iddata.forEach(ele => {
+            let d=document.createElement("div")
+            d.addEventListener("click",()=>{
+                displaypro(ele);
+            })
+            let i=document.createElement("img")
+            i.src=ele.img;
+            let pa=document.createElement("p")
+            pa.innerText=ele.name.substr(0,10);
+            let c=document.createElement("h5")
+            c.innerText=ele.price_mrp.substr(0,7);
+            d.append(i,pa,c)
+            document.querySelector("#cyc2").append(d)
+
+        });
+    }
+
     function display2(a,b){
         var iddata2=[];
         for(let i=0;i<5;i++){
@@ -324,7 +452,147 @@
 
         });
     }
+    var sliderarr=[
+        "https://img.gkbcdn.com/s3/bn/2211/740x670-636b8aec2b40c926007db2b0.jpg",
+        "https://img.gkbcdn.com/bn/2211/740x670-6369b73f2b40c95728c3e707._p1_.jpg",
+        "https://img.gkbcdn.com/bn/2211/740x670-636382c52b40c94424fc21e0._p1_.jpg",
+        "https://img.gkbcdn.com/bn/2210/740x670-635f8c012b40c90c8c92734d._p1_.jpg",
+        "https://img.gkbcdn.com/bn/2211/740x670-63647bec2b40c94fac2af423._p1_.jpg",
+        "https://img.gkbcdn.com/bn/2211/740x670-63647c282b40c94fac2af425._p1_.jpg",
+        "https://img.gkbcdn.com/bn/2211/740x670-63647ba22b40c94fac2af421._p1_.jpg",
+        "https://img.gkbcdn.com/bn/2211/740x670-636328c82b40c92ed8b1d35e._p1_.jpg"
+    ]
+    var i=-1;
+    setInterval(sld,4000);
+    sld();
+    function sld(){
+        if(i<sliderarr.length-1){
+            i++;
+        }
+        else{
+            i=0;
+        }
+        document.querySelector("#slider>img").src=sliderarr[i];
+    }
 
+    // setTimeout(() => {
+    //     dealspage();
+    // }, 4000);
+    function dealspage(){
+        document.querySelector("#land").innerHTML="";
+        fetch("./dealdata.json")
+        .then((res) => res.json())
+        .then((data)=>dd(data.dealdata))
+
+        function dd(data){
+            data.forEach(function(ele){
+                var griddiv=document.createElement("div");
+                griddiv.addEventListener("click",()=>{
+                        displaypro(ele);
+                })
+
+                var ig=document.createElement("img");
+                ig.src=ele.img;
+                var h4=document.createElement("h4");
+                h4.innerText=ele.name.substr(0,48);
+                h4.style="font-size:14px"
+                var h3=document.createElement("h3");
+                h3.innerText=ele.price;
+                h3.style="color:#D81414;font-size:18px"
+                var sp=document.createElement("span")
+                sp.innerText=ele.mrp;
+                sp.style="text-decoration:line-through;display:block";
+                var dis=document.createElement("h6")
+                dis.innerText=ele.discount;
+                dis.style="padinng:10px;background-color:red;display:inline;font-size:18px"
+               
+
+
+                griddiv.append(ig,h4,h3,sp,dis);
+
+                document.querySelector("#delgd").append(griddiv);
+            })
+           
+        }
+       
+    }
+    displaypro=(e)=>{
+       
+            document.querySelector("#delgd").innerHTML="";
+            document.querySelector("#land").innerHTML="";
+            var d=document.createElement("div");
+            d.setAttribute("id","singlewin");
+            var div1=document.createElement("div");
+            var div2=document.createElement("div");
+            let i=document.createElement("img");
+            i.src=e.img;
+            let hed=document.createElement("h3");
+            hed.innerText=e.name;
+            let pr=document.createElement("h2");
+            pr.innerText=e.price || e.mrp;
+            let mrps=document.createElement("span");
+            mrps.innerText=e.mrp;
+            mrps.style="text-decoration:line-through"
+            let dis=document.createElement("p");
+            dis.innerText=e.discount || "Nodiscount";
+            let qt=document.createElement("span");
+            qt.innerText="QTY:"
+            
+            let scop=document.createElement("input");
+            scop.type=Number;
+            scop.value=1;
+            let mi=document.createElement("button");
+            mi.innerHTML="-";
+            mi.addEventListener("click",()=>{
+                if(scop.value>1){
+                    scop.value--;
+                }
+            })
+            scop.style="width:20px;"
+            let ma=document.createElement("button");
+            ma.innerHTML="+";
+            ma.addEventListener("click",()=>{
+                scop.value++;
+            })
+            let atc=document.createElement("button");
+            atc.innerHTML="Add to cart";
+            atc.addEventListener("click",()=>{
+                var arr=JSON.parse(localStorage.getItem("shopfrogcart")) || [];
+                e.qty=scop.value;
+                let ab=e.img;
+                let bc=e.name;
+                let cd=e.price;
+                let de=e.qty;
+                
+                
+
+                let obj={ab,bc,cd,de};
+                let prom=new Promise((res,rej)=>{
+                    arr.forEach((ele)=>{
+                        if(bc==ele.bc){
+                            rej("Product already in Cart");
+                        }
+                    })
+                    res();
+                })
+                .then((res)=>{
+                    alert("added to cart");
+                    arr.push(obj);
+                    localStorage.setItem("shopfrogcart",JSON.stringify(arr));
+                })
+                .catch((rest)=>alert(rest));
+            })
+            let by=document.createElement("button");
+            by.innerHTML="Buy Now";
+            let r=document.createElement("br");
+
+
+            div1.append(i);
+            div2.append(hed,pr,mrps,dis,qt,mi,scop,ma,r,atc,by)
+            d.append(div1,div2);
+            document.querySelector("#delgd2").append(d);
+
+    }
     var products_bike_api="https://recommender.scarabresearch.com/merchants/116571D43669AB19/?pv=353371885&xp=1&f=f%3APERSONAL%2Cl%3A8%2Co%3A0&cp=1&vi=64E2415F88EC3EF&p=25517%7C1667909828";
     var timmer_api="https://recommender.scarabresearch.com/merchants/116571D43669AB19/?pv=356248641&xp=1&f=f%3ARELATED%2Cl%3A5%2Co%3A0%7Cf%3AALSO_BOUGHT%2Cl%3A5%2Co%3A0&v=i%3A17662%2Ct%3APERSONAL%2Cc%3AAAAA&cp=1&vi=64E2415F88EC3EF&p=25517%7C1667909828&prev_url=https%3A%2F%2Fwww.geekbuying.com%2F";
 </script>
