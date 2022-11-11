@@ -54,12 +54,15 @@
             margin-right: 5%;
         }
         #bottomnav>ul{
-            border:1px solid none;
+            border:1px solid none;;
             display:flex;
             width:70%;
             list-style-type: none;
             justify-content:space-evenly;
             font-size:20px;   
+        }
+        #bottomnav img{
+            height:25px;
         }
         .navbar{
             width:100%;
@@ -72,14 +75,6 @@
             display:flex;
             justify-content: space-between;
         }
-        /* #mid *{
-            border:1px solid red;
-            margin:3px
-        } */
-        /* #mid>div>div{
-            display:flex;
-        } */
-        
         #mid img{
             width:100%;
             height:100%;
@@ -87,12 +82,14 @@
         #mid>div{
             height:500px;
             width:49%;
-            /* border:1px solid red; */
-           
+            border:1px solid none;  
         }
-        #mid>div:nth-child(2){
-            
-            padding-left:10px;
+        .lig{
+            border:1px solid none;
+            height:220px;
+            background-color: azure;
+            padding:10px;
+            margin:0px 0px 20px 0px;  
         }
         #trenddiv>div{
             display:flex;
@@ -100,6 +97,9 @@
         }
         #trenddiv>div>div{
             width:30%;
+        }
+        #trenddiv>div>div *{
+            margin:10px 0px;
         }
         #trenddiv>div>div>img{
             width:100%;
@@ -137,7 +137,7 @@
             justify-content:space-evenly;
         }
         #cyc>div>*,#cyc2>div>*{
-            margin:0px;
+            margin:8px 0px;
             padding:0px;
         }
         #cyc>div,#cyc2>div{
@@ -146,17 +146,18 @@
             
         }
         #newforyou{
-            width:80%;
-            margin:auto;
+            width:78%;
+            margin:20px auto;
             background-color:aliceblue ;
         }
         #tri{
             width:100%;
             display:flex;
             justify-content: space-evenly;
+            
         }
         #tri>div{
-            width:19%;
+            width:17%;
             background-color: white;
             margin:8px;
         }
@@ -168,7 +169,7 @@
         }
         #delgd{
             width:80%;
-            margin:auto;
+            margin:30px auto;
             display:grid;
             grid-template-columns: repeat(6,1fr);
             gap:15px;
@@ -184,18 +185,15 @@
             font-size: 18px;
             color:#2e2f32;
         }
-        .lig{
-            background-color: azure;
-            padding:10px;
-            margin:10px;
-            
-        }
         #land>*{
             padding:20px;
         }
         #delgd2{
             width:80%;
             margin:auto;
+        }
+        #delgdcld2>*{
+            margin:8px 0px;
         }
         #singlewin{
             display:flex;
@@ -209,6 +207,32 @@
         }
         #singlewin>div:nth-child(1) img{
             width:60%;
+        }
+        #flow{
+            position:relative;
+            cursor: pointer; 
+            border:2px solid white;
+            padding:5px 5px 0px 5px;
+            border-radius: 10px 10px 0px 0px; 
+            background-color: #2677e8;         
+        }
+        .dropdown{
+            position:absolute;
+            color:black;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            background-color: #F1F6FC;
+        }
+        .dropdown>li{
+            display:none;
+            width:300px;
+            padding:5px;
+        }
+        #flow:hover > .dropdown li{
+            display:block;
+        }
+        #midnav>a>img{
+            height:22px;;
+            width:22px;
         }
     </style>
 </head>
@@ -230,12 +254,24 @@
                 <option value="">Smart home & Garden</option>
             </select>
             <input type="text">
-            <a href="./signin.html">Sign in</a>
-            <a href="./cart.html">cart</a>
+            <span>
+                <span>Ship to</span>
+                <span class="flag" countrycode="IN"></span>/INR
+            </span>
+            <a href="./signin.html"><img src="./imgs/growth (1).png" alt=""> Sign in</a>
+            <a href="./cart.html"><img src="./imgs/shopping-cart.png" alt=""></a>
         </div>
         <div id="bottomnav">
             <ul>
-                <li>Categories</li>
+                <li id="flow">Categories
+                    <ul class="dropdown">
+                        <li>Local warehouses</li>
+                        <li>Sports & outdoors</li>
+                        <li>Exercise_products</li>
+                        <li>Consumer Electonics</li>
+                        <li>genarators & Portable power</li>
+                    </ul>
+                </li>
                 <li>New</li>
                 <li>Bestselling</li>
                 <li>Brand</li>
@@ -248,12 +284,7 @@
         </div>
     </div>
     <divi id="center">
-        <div id="delgd" >
-
-        </div>
-        <div id="delgd2" >
-
-        </div>
+        
         <div id="land">
             <div id="mid">
                 <div id="slider">
@@ -261,7 +292,7 @@
                  
                 </div>
                 <div>
-                    <div>
+                    <div id="ligpa">
                         <div class="lig">
                             <h1 class="dod">Deal of the Day</h1>
                             <div id="cyc">
@@ -304,7 +335,12 @@
                 </div>
             </div>
         </div>
-        
+        <div id="delgd" >
+
+        </div>
+        <div id="delgd2" >
+
+        </div>
     </divi>
     <div id="footer">
         <div>
@@ -427,7 +463,7 @@
             let pa=document.createElement("p")
             pa.innerText=ele.name.substr(0,10);
             let c=document.createElement("h5")
-            c.innerText=ele.price_mrp.substr(0,7);
+            c.innerText=ele.price.substr(0,7);
             d.append(i,pa,c)
             document.querySelector("#cyc2").append(d)
 
@@ -465,6 +501,7 @@
     var i=-1;
     setInterval(sld,4000);
     sld();
+    
     function sld(){
         if(i<sliderarr.length-1){
             i++;
@@ -472,7 +509,9 @@
         else{
             i=0;
         }
-        document.querySelector("#slider>img").src=sliderarr[i];
+        var sscld=document.querySelector("#slider>img");
+        sscld.src=sliderarr[i];
+        sscld.addEventListener("click",dealspage);
     }
 
     // setTimeout(() => {
@@ -485,6 +524,10 @@
         .then((data)=>dd(data.dealdata))
 
         function dd(data){
+            let hhh=document.createElement("h1");
+                hhh.innerText="Flash Deals";
+                hhh.style="margin-left:45%"
+            document.querySelector("#land").append(hhh);
             data.forEach(function(ele){
                 var griddiv=document.createElement("div");
                 griddiv.addEventListener("click",()=>{
@@ -509,7 +552,59 @@
 
 
                 griddiv.append(ig,h4,h3,sp,dis);
+                
+               
+                document.querySelector("#delgd").append(griddiv);
+            })
+           
+        }
+       
+    }
+    let ww=document.querySelectorAll("#flow>.dropdown>li");
+    for(let i=0;i<4;i++){
+        ww[i].addEventListener("click",()=>{
+            (i==0)? allcatpage("./ware1.json",i):
+           (i==1)? allcatpage(("./run_results.json"),i):
+           (i==2)? allcatpage(("./run_results.json"),i)
+           :null;
+            
+        })
+    }
+    
+    function allcatpage(url,type){
+        document.querySelector("#land").innerHTML="";
+        fetch(url)
+        .then((res) => res.json())
+        .then((data)=>{
+            if(type==0) dd(data.AAA);
+            if(type==1) dd(data.outdoor_products);
+            if(type==2) dd(data.exercise_products)
+        });
 
+        function dd(data){
+            document.querySelector("#delgd").innerHTML="";
+            document.querySelector("#land").innerHTML="";
+            document.querySelector("#delgd2").innerHTML="";
+            data.forEach(function(ele){
+                var griddiv=document.createElement("div");
+                griddiv.addEventListener("click",()=>{
+                        displaypro(ele);
+                })
+
+                var ig=document.createElement("img");
+                ig.src=ele.img;
+                var h4=document.createElement("h4");
+                h4.innerText=ele.name.substr(0,48);
+                h4.style="font-size:14px"
+                var h3=document.createElement("h3");
+                h3.innerText=ele.price.substr(0,7);
+                h3.style="color:#D81414;font-size:18px"
+                var sp=document.createElement("span")
+                sp.innerText=ele.mrp;
+                sp.style="text-decoration:line-through;display:block";
+                griddiv.append(ig,h4,h3,sp);
+                
+               
                 document.querySelector("#delgd").append(griddiv);
             })
            
@@ -517,32 +612,35 @@
        
     }
     displaypro=(e)=>{
-       
             document.querySelector("#delgd").innerHTML="";
             document.querySelector("#land").innerHTML="";
+            document.querySelector("#delgd2").innerHTML="";
             var d=document.createElement("div");
             d.setAttribute("id","singlewin");
             var div1=document.createElement("div");
             var div2=document.createElement("div");
+            div2.id="delgdcld2";
             let i=document.createElement("img");
             i.src=e.img;
             let hed=document.createElement("h3");
             hed.innerText=e.name;
             let pr=document.createElement("h2");
-            pr.innerText=e.price || e.mrp;
+            pr.innerText=e.price.substr(0,7) || e.mrp;
             let mrps=document.createElement("span");
             mrps.innerText=e.mrp;
             mrps.style="text-decoration:line-through"
             let dis=document.createElement("p");
             dis.innerText=e.discount || "Nodiscount";
+            dis.style="color:blue"
             let qt=document.createElement("span");
-            qt.innerText="QTY:"
-            
+            qt.innerText="QTY:";
+            qt.style="margin-right:30px"
             let scop=document.createElement("input");
             scop.type=Number;
             scop.value=1;
             let mi=document.createElement("button");
             mi.innerHTML="-";
+            mi.style="width:20px"
             mi.addEventListener("click",()=>{
                 if(scop.value>1){
                     scop.value--;
@@ -551,17 +649,19 @@
             scop.style="width:20px;"
             let ma=document.createElement("button");
             ma.innerHTML="+";
+            ma.style="width:20px"
             ma.addEventListener("click",()=>{
                 scop.value++;
             })
             let atc=document.createElement("button");
             atc.innerHTML="Add to cart";
+            atc.style="margin-right:20px;padding:5px"
             atc.addEventListener("click",()=>{
                 var arr=JSON.parse(localStorage.getItem("shopfrogcart")) || [];
                 e.qty=scop.value;
                 let ab=e.img;
                 let bc=e.name;
-                let cd=e.price;
+                let cd=e.price || e.mrp;
                 let de=e.qty;
                 
                 
@@ -584,6 +684,7 @@
             })
             let by=document.createElement("button");
             by.innerHTML="Buy Now";
+            by.style="margin-right:20px;padding:5px"
             let r=document.createElement("br");
 
 

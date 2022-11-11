@@ -10,162 +10,186 @@
             margin:0;
             padding:0;
         }
-        body{
-            width:100%;
-        }
-        ul{
-            list-style-type: none;;
-        }
-        #topnav{
-            padding:5px;
-        }
-        #topnav>ul{
-            display:flex;
-            list-style-type: none;
-            justify-content: end;
-        }
-        #topnav>ul li{
-            margin:0px 60px;
-            font-size: 18px;;
-        }
-        #midnav{
-            height:auto;
-            width:100%;
-            padding:15px;
-            font-size: 22px
-        }
-        #midnav>img{
-            width:50%;
-            height:100%;
-            border:1px solid red;
-        }
-        #midnav>a{
-            text-decoration: none;
-            margin:0px 30px;
-        }
-        #midnav>h1>a{
-            
-            text-decoration:none;
-            color:white;
-        }
-        #midnav>h1{
-            display:inline;
-            margin-left: 5%;
-            margin-right: 5%;
-        }
-        #bottomnav>ul{
-            border:1px solid none;
-            display:flex;
-            width:70%;
-            list-style-type: none;
-            justify-content:space-evenly;
-            font-size:20px;   
-        }
-        .navbar{
-            width:100%;
-            background-color: #086DFF;
-            color:white;
-        }
-        #footf{
+        #centerend{
             display:flex;
         }
-        #footf a{
-            text-decoration:none;
-        }
-        #footer>div{
+        #centertop{
             width:80%;
             margin:auto;
+        }
+        #ct1{
+            display:flex;
+            justify-content: space-between;
+            padding:20px;
+            background-color: azure;
+            margin:20px 0px;
+        }
+        #ct2{
+            display: flex;
+            justify-content: space-between;
+            padding:20px;
+            background-color: azure;
+            margin:20px 0px 0px 0px;
+        }
+        #ct2in{
+            display:flex;
+            width:40%;
+            justify-content: space-between;
+        }
+        #ct3in{
+            display:flex;
+        }
+        #ct3in>*{
+            margin:50px 15px;
+        }
+        #disproduct{
+            background-color:beige;
+            padding:10px;;
+        }
+        #ct4{
+            display: flex;
+            align-items: center; 
+            
+        }
+        #ct4>*{
+            margin-right:20px;    
+        }
+        #ct4>button>img{
+            height:15px;
+        }
+        #ct4>button{
+            height:40px;
+            margin:auto 10px;
+        }
+        #innerproducts{
+            display:flex;
+            justify-content: space-between;
+        }
+        #navbar{
+            height:80px;
+            background-color: #086DFF;
+        }
+        #navbar>h1{
+            color:white;
             text-align: center;
+            padding:20px 0px;
         }
-        #footer{
-            background-color: #F1F6FC;
+        #navbar>h1>a{
+            text-decoration: none;
+            color:white;
         }
-
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <div id="topnav">
-            <ul>
-                <li>Save BIG with our app!</li>
-                <li>Language</li>
-                <li>Support Center</li>
-            </ul>
-        </div>
-        <hr>
-        <div id="midnav">
+    <div>
+        <div id="navbar">
             <h1><a href="./index.html">Shopfrog</a></h1>
-            <!-- <img src="https://www.bing.com/th?id=OIP.EJB7pKGWux0ANscWFU0H_AAAAA&w=259&h=86&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt=""> -->
-            <select name="category" id="allcat">
-                <option value="">All Categories</option>
-                <option value="">Smart home & Garden</option>
-            </select>
-            <input type="text">
-            <a href="">Sign in</a>
-            <a href="">cart</a>
-        </div>
-        <div id="bottomnav">
-            <ul>
-                <li>Categories</li>
-                <li>New</li>
-                <li>Bestselling</li>
-                <li>Brand</li>
-                <li>Clearance</li>
-                <li>Deal</li>
-                <li>Coupon</li>
-                <li>App only</li>
-                <li><img src="https://img.gkbcdn.com/s3/bn/2209/174x35b-631b1e9b2b40c9215c578605.gif" alt=""></li>
-            </ul>
-        </div>
-    </div>
-    <div id="center">
-        <div id="cenmid">
-            <div>
-                <img src="" alt="">
-            </div>
-            <div>
 
-            </div>
         </div>
-    </div>
-    <div id="footer">
         <div>
-            <div><h1>Why buy from shopfrog?</h1></div>
-            <div>
-                <input type="text">
-                <input type="submit">
-            </div>
-            <div id="footf">
-                <ul>
-                    <a href=""><li><strong>Help</strong></li></a>
-                    <a href=""><li>Order status</li></a>
-                    <a href=""><li>About us</li></a>
-                    <a href=""><li>Contact us</li></a>
-                    <a href=""><li>Warranty</li></a>
-                    <a href=""><li>FAQs</li></a>
-                    <a href=""><li>Sitemap</li></a>
-                </ul>
-                <ul>
-                    <a href=""><li><strong>Support</strong></li></a>
-                    <a href=""><li>WhatShopfrog</li></a>
-                    <a href=""><li>Shipping guide</li></a>
-                    <a href=""><li>Payment information</li></a>
-                    <a href=""><li>Wholesale</li></a>
-                    <a href=""><li>Drop shipping</li></a>
-                    <a href=""><li>Blog</li></a>
-                    <a href=""><li>Affiliates</li></a>
-                </ul>
-                <ul>
-                    <a href=""><li><strong>Policies</strong></li></a>
-                    <a href=""><li>Terms & conditions</li></a>
-                    <a href="">  <li>Return policy</li></a>
-                    <a href=""><li>Private</li></a>
-                    <a href=""><li>Declaration</li></a>
-                    <a href=""><li>Customs</li></a>
-                </ul>
-            </div>
+            <div id="centertop">
+                <div id="ct1">
+                    <p>Product Name & Detail</p>
+                    <p>Ship to <span></span></p>
+                </div>
+                <div id="ct2">
+                    <p>Product Name & Detail</p>
+                    <div id="ct2in">
+                        <p>Unit Price</p>
+                        <p>Quality</p>
+                        <p>Total</p>
+                        <p>Operation</p>
+                    </div>
+                </div>
+                <div id="ct3">
+                    <div id="disproduct"></div>
+                    <div id="ct3in">
+                        <option value="">Select All</option>
+                        <a href="">Add to wichlist</a>
+                        <a>delete</a>
+                    </div>
+                </div>
+                <div id="ct4">
+                    <p>continue shoping ></p>
+                    <p>you choose <span>0</span>items</p>
+                    <button>Pay with <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAxcHgiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAxMDEgMzIiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaW5ZTWluIG1lZXQiIHhtbG5zPSJodHRwOiYjeDJGOyYjeDJGO3d3dy53My5vcmcmI3gyRjsyMDAwJiN4MkY7c3ZnIj48cGF0aCBmaWxsPSIjMDAzMDg3IiBkPSJNIDEyLjIzNyAyLjggTCA0LjQzNyAyLjggQyAzLjkzNyAyLjggMy40MzcgMy4yIDMuMzM3IDMuNyBMIDAuMjM3IDIzLjcgQyAwLjEzNyAyNC4xIDAuNDM3IDI0LjQgMC44MzcgMjQuNCBMIDQuNTM3IDI0LjQgQyA1LjAzNyAyNC40IDUuNTM3IDI0IDUuNjM3IDIzLjUgTCA2LjQzNyAxOC4xIEMgNi41MzcgMTcuNiA2LjkzNyAxNy4yIDcuNTM3IDE3LjIgTCAxMC4wMzcgMTcuMiBDIDE1LjEzNyAxNy4yIDE4LjEzNyAxNC43IDE4LjkzNyA5LjggQyAxOS4yMzcgNy43IDE4LjkzNyA2IDE3LjkzNyA0LjggQyAxNi44MzcgMy41IDE0LjgzNyAyLjggMTIuMjM3IDIuOCBaIE0gMTMuMTM3IDEwLjEgQyAxMi43MzcgMTIuOSAxMC41MzcgMTIuOSA4LjUzNyAxMi45IEwgNy4zMzcgMTIuOSBMIDguMTM3IDcuNyBDIDguMTM3IDcuNCA4LjQzNyA3LjIgOC43MzcgNy4yIEwgOS4yMzcgNy4yIEMgMTAuNjM3IDcuMiAxMS45MzcgNy4yIDEyLjYzNyA4IEMgMTMuMTM3IDguNCAxMy4zMzcgOS4xIDEzLjEzNyAxMC4xIFoiPjwvcGF0aD48cGF0aCBmaWxsPSIjMDAzMDg3IiBkPSJNIDM1LjQzNyAxMCBMIDMxLjczNyAxMCBDIDMxLjQzNyAxMCAzMS4xMzcgMTAuMiAzMS4xMzcgMTAuNSBMIDMwLjkzNyAxMS41IEwgMzAuNjM3IDExLjEgQyAyOS44MzcgOS45IDI4LjAzNyA5LjUgMjYuMjM3IDkuNSBDIDIyLjEzNyA5LjUgMTguNjM3IDEyLjYgMTcuOTM3IDE3IEMgMTcuNTM3IDE5LjIgMTguMDM3IDIxLjMgMTkuMzM3IDIyLjcgQyAyMC40MzcgMjQgMjIuMTM3IDI0LjYgMjQuMDM3IDI0LjYgQyAyNy4zMzcgMjQuNiAyOS4yMzcgMjIuNSAyOS4yMzcgMjIuNSBMIDI5LjAzNyAyMy41IEMgMjguOTM3IDIzLjkgMjkuMjM3IDI0LjMgMjkuNjM3IDI0LjMgTCAzMy4wMzcgMjQuMyBDIDMzLjUzNyAyNC4zIDM0LjAzNyAyMy45IDM0LjEzNyAyMy40IEwgMzYuMTM3IDEwLjYgQyAzNi4yMzcgMTAuNCAzNS44MzcgMTAgMzUuNDM3IDEwIFogTSAzMC4zMzcgMTcuMiBDIDI5LjkzNyAxOS4zIDI4LjMzNyAyMC44IDI2LjEzNyAyMC44IEMgMjUuMDM3IDIwLjggMjQuMjM3IDIwLjUgMjMuNjM3IDE5LjggQyAyMy4wMzcgMTkuMSAyMi44MzcgMTguMiAyMy4wMzcgMTcuMiBDIDIzLjMzNyAxNS4xIDI1LjEzNyAxMy42IDI3LjIzNyAxMy42IEMgMjguMzM3IDEzLjYgMjkuMTM3IDE0IDI5LjczNyAxNC42IEMgMzAuMjM3IDE1LjMgMzAuNDM3IDE2LjIgMzAuMzM3IDE3LjIgWiI+PC9wYXRoPjxwYXRoIGZpbGw9IiMwMDMwODciIGQ9Ik0gNTUuMzM3IDEwIEwgNTEuNjM3IDEwIEMgNTEuMjM3IDEwIDUwLjkzNyAxMC4yIDUwLjczNyAxMC41IEwgNDUuNTM3IDE4LjEgTCA0My4zMzcgMTAuOCBDIDQzLjIzNyAxMC4zIDQyLjczNyAxMCA0Mi4zMzcgMTAgTCAzOC42MzcgMTAgQyAzOC4yMzcgMTAgMzcuODM3IDEwLjQgMzguMDM3IDEwLjkgTCA0Mi4xMzcgMjMgTCAzOC4yMzcgMjguNCBDIDM3LjkzNyAyOC44IDM4LjIzNyAyOS40IDM4LjczNyAyOS40IEwgNDIuNDM3IDI5LjQgQyA0Mi44MzcgMjkuNCA0My4xMzcgMjkuMiA0My4zMzcgMjguOSBMIDU1LjgzNyAxMC45IEMgNTYuMTM3IDEwLjYgNTUuODM3IDEwIDU1LjMzNyAxMCBaIj48L3BhdGg+PHBhdGggZmlsbD0iIzAwOWNkZSIgZD0iTSA2Ny43MzcgMi44IEwgNTkuOTM3IDIuOCBDIDU5LjQzNyAyLjggNTguOTM3IDMuMiA1OC44MzcgMy43IEwgNTUuNzM3IDIzLjYgQyA1NS42MzcgMjQgNTUuOTM3IDI0LjMgNTYuMzM3IDI0LjMgTCA2MC4zMzcgMjQuMyBDIDYwLjczNyAyNC4zIDYxLjAzNyAyNCA2MS4wMzcgMjMuNyBMIDYxLjkzNyAxOCBDIDYyLjAzNyAxNy41IDYyLjQzNyAxNy4xIDYzLjAzNyAxNy4xIEwgNjUuNTM3IDE3LjEgQyA3MC42MzcgMTcuMSA3My42MzcgMTQuNiA3NC40MzcgOS43IEMgNzQuNzM3IDcuNiA3NC40MzcgNS45IDczLjQzNyA0LjcgQyA3Mi4yMzcgMy41IDcwLjMzNyAyLjggNjcuNzM3IDIuOCBaIE0gNjguNjM3IDEwLjEgQyA2OC4yMzcgMTIuOSA2Ni4wMzcgMTIuOSA2NC4wMzcgMTIuOSBMIDYyLjgzNyAxMi45IEwgNjMuNjM3IDcuNyBDIDYzLjYzNyA3LjQgNjMuOTM3IDcuMiA2NC4yMzcgNy4yIEwgNjQuNzM3IDcuMiBDIDY2LjEzNyA3LjIgNjcuNDM3IDcuMiA2OC4xMzcgOCBDIDY4LjYzNyA4LjQgNjguNzM3IDkuMSA2OC42MzcgMTAuMSBaIj48L3BhdGg+PHBhdGggZmlsbD0iIzAwOWNkZSIgZD0iTSA5MC45MzcgMTAgTCA4Ny4yMzcgMTAgQyA4Ni45MzcgMTAgODYuNjM3IDEwLjIgODYuNjM3IDEwLjUgTCA4Ni40MzcgMTEuNSBMIDg2LjEzNyAxMS4xIEMgODUuMzM3IDkuOSA4My41MzcgOS41IDgxLjczNyA5LjUgQyA3Ny42MzcgOS41IDc0LjEzNyAxMi42IDczLjQzNyAxNyBDIDczLjAzNyAxOS4yIDczLjUzNyAyMS4zIDc0LjgzNyAyMi43IEMgNzUuOTM3IDI0IDc3LjYzNyAyNC42IDc5LjUzNyAyNC42IEMgODIuODM3IDI0LjYgODQuNzM3IDIyLjUgODQuNzM3IDIyLjUgTCA4NC41MzcgMjMuNSBDIDg0LjQzNyAyMy45IDg0LjczNyAyNC4zIDg1LjEzNyAyNC4zIEwgODguNTM3IDI0LjMgQyA4OS4wMzcgMjQuMyA4OS41MzcgMjMuOSA4OS42MzcgMjMuNCBMIDkxLjYzNyAxMC42IEMgOTEuNjM3IDEwLjQgOTEuMzM3IDEwIDkwLjkzNyAxMCBaIE0gODUuNzM3IDE3LjIgQyA4NS4zMzcgMTkuMyA4My43MzcgMjAuOCA4MS41MzcgMjAuOCBDIDgwLjQzNyAyMC44IDc5LjYzNyAyMC41IDc5LjAzNyAxOS44IEMgNzguNDM3IDE5LjEgNzguMjM3IDE4LjIgNzguNDM3IDE3LjIgQyA3OC43MzcgMTUuMSA4MC41MzcgMTMuNiA4Mi42MzcgMTMuNiBDIDgzLjczNyAxMy42IDg0LjUzNyAxNCA4NS4xMzcgMTQuNiBDIDg1LjczNyAxNS4zIDg1LjkzNyAxNi4yIDg1LjczNyAxNy4yIFoiPjwvcGF0aD48cGF0aCBmaWxsPSIjMDA5Y2RlIiBkPSJNIDk1LjMzNyAzLjMgTCA5Mi4xMzcgMjMuNiBDIDkyLjAzNyAyNCA5Mi4zMzcgMjQuMyA5Mi43MzcgMjQuMyBMIDk1LjkzNyAyNC4zIEMgOTYuNDM3IDI0LjMgOTYuOTM3IDIzLjkgOTcuMDM3IDIzLjQgTCAxMDAuMjM3IDMuNSBDIDEwMC4zMzcgMy4xIDEwMC4wMzcgMi44IDk5LjYzNyAyLjggTCA5Ni4wMzcgMi44IEMgOTUuNjM3IDIuOCA5NS40MzcgMyA5NS4zMzcgMy4zIFoiPjwvcGF0aD48L3N2Zz4" alt=""></button>
+                    <button id="pay">Proceed to checkout</button>
+                </div>
+            </div>   
         </div>
     </div>
-    
 </body>
 </html>
+<script>
+    var arr=JSON.parse(localStorage.getItem("shopfrogcart"));
+    funji();
+    function funji(){
+        document.querySelector("#disproduct").innerHTML="" || [];
+        arr.forEach(element => {
+            let d=document.createElement("div");
+            d.setAttribute("id","innerproducts")
+            let i=document.createElement("img");
+            i.src=element.ab;
+            i.style="weigth:80px;height:80px;box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;margin:8px"
+            var p1=document.createElement("p");
+            p1.innerText=element.bc;
+            let p2=document.createElement("p");
+            p2.innerText=element.cd.substr(0,7);
+
+            let p3=document.createElement("div");
+                    let m1=document.createElement("button");
+                    m1.innerHTML="-";
+                    // m1.style="display:block"
+                    m1.addEventListener("click",()=>{
+                        if(m00.value>1){
+                            m00.value--;
+                            element.de=m00.value;
+                            localStorage.setItem("shopfrogcart",JSON.stringify(arr));
+                            funji();
+                        }   
+                    })
+                    let m00=document.createElement("input");
+                    m00.value=element.de;
+                    m00.style="width:40px"
+                    let m2=document.createElement("button");
+                    m2.innerHTML="+";
+                    m2.addEventListener("click",()=>{
+                        m00.value++;
+                        element.de=m00.value;
+                        localStorage.setItem("shopfrogcart",JSON.stringify(arr));
+                        funji();
+                    })
+                p3.append(m1,m00,m2);
+            let p4=document.createElement("p");
+            let sellp=((element.cd.substr(0,7)).replace("$",""))
+            let dsell=+(sellp);
+            p4.innerText=dsell*m00.value;
+
+            let p5=document.createElement("p");
+            p5.innerText="delete";
+            p5.addEventListener("click",()=>{
+                p5.style="color:red";
+                delfun(element,i);
+            })
+            let ina=document.createElement("div");
+            ina.style="display:flex;width:55%;"
+            let ina2=document.createElement("div");
+            ina2.style="width:40%;display:flex;justify-content:space-between"
+            ina.append(i,p1)
+            ina2.append(p2,p3,p4,p5)
+            d.append(ina,ina2);
+            document.querySelector("#disproduct").append(d);
+        });
+        document.querySelector("#ct4>p>span").innerHTML=arr.length;
+    }
+    document.querySelector("#pay").addEventListener("click",()=>{
+        document.querySelector("#pay").style="color:red"
+            console.log("ljhffghjk");
+
+    })
+    delfun=(ele,i)=>{
+        arr.splice(i,1);
+        localStorage.setItem("shopfrogcart",JSON.stringify(arr));
+        funji();
+    }
+</script>
