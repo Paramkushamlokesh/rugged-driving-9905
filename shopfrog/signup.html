@@ -5,45 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
-    <style>
-*{
-    margin:0px;
-    padding:0px;
-}
-form>a>img{
-    width:30px;
-    height:30px;
-    
-}
-#nav{
-        background-color: #2887FD;
-        height:100px;
-}
-form{
-    background-color: white;
-    margin:auto;
-    padding:30px;
-    width:25%;
-    height:400px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    font-size: medium;
-}
-#center{
-    height:100vh;
-    background-image: url('https://img.gkbcdn.com/bn/2207/750-62c525372b40c92a04c94f48._p1_.jpg') ;
-}
-form>input{
-    margin:10px;
-    width:90%;
-    height:30px;
-    font-size: large;
-}
-form>input:nth-child(6){
-    width:10%;
-    display:inline;
-}
-
-    </style>
+    <link rel="stylesheet" href="./styles/signup.css">
 </head>
 <body>
    <div id="nav">
@@ -71,26 +33,4 @@ form>input:nth-child(6){
    </div>
 </body>
 </html>
-<script>
-    document.querySelector("form").addEventListener("submit",(e)=>{
-        e.preventDefault();
-        sub();
-    });
-    let arr=JSON.parse(localStorage.getItem("shopfrogUD")) || []
-    function sub(){
-        
-        
-        console.log("hello");
-        var int=document.querySelectorAll("input");
-        let nickname=int[0].value;
-        let Email_address=int[1].value;
-        let Password=int[2].value;
-        let obj={
-            Rn: nickname,
-            Re: Email_address,
-            Rp: Password
-        };
-        arr.push(obj);
-        localStorage.setItem("shopfrogUD",JSON.stringify(arr));
-    }
-</script>
+<script src="./scripts/signupjs.js"></script>

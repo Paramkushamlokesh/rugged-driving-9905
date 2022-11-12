@@ -5,236 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        *{
-            margin:0;
-            padding:0;
-        }
-        body{
-            width:100%;
-        }
-        ul{
-            list-style-type: none;;
-        }
-        #topnav{
-            padding:5px;
-        }
-        #topnav>ul{
-            display:flex;
-            list-style-type: none;
-            justify-content: end;
-        }
-        #topnav>ul li{
-            margin:0px 60px;
-            font-size: 18px;;
-        }
-        #midnav{
-            height:auto;
-            width:100%;
-            padding:15px;
-            font-size: 22px
-        }
-        #midnav>img{
-            width:50%;
-            height:100%;
-            border:1px solid red;
-        }
-        #midnav>a{
-            text-decoration: none;
-            margin:0px 30px;
-        }
-        #midnav>h1>a{
-            
-            text-decoration:none;
-            color:white;
-        }
-        #midnav>h1{
-            display:inline;
-            margin-left: 5%;
-            margin-right: 5%;
-        }
-        #bottomnav>ul{
-            border:1px solid none;;
-            display:flex;
-            width:70%;
-            list-style-type: none;
-            justify-content:space-evenly;
-            font-size:20px;   
-        }
-        #bottomnav img{
-            height:25px;
-        }
-        .navbar{
-            width:100%;
-            background-color: #086DFF;
-            color:white;
-        }
-        #mid{
-            width:80%;
-            margin:auto;
-            display:flex;
-            justify-content: space-between;
-        }
-        #mid img{
-            width:100%;
-            height:100%;
-        }
-        #mid>div{
-            height:500px;
-            width:49%;
-            border:1px solid none;  
-        }
-        .lig{
-            border:1px solid none;
-            height:220px;
-            background-color: azure;
-            padding:10px;
-            margin:0px 0px 20px 0px;  
-        }
-        #trenddiv>div{
-            display:flex;
-            justify-content: space-between;
-        }
-        #trenddiv>div>div{
-            width:30%;
-        }
-        #trenddiv>div>div *{
-            margin:10px 0px;
-        }
-        #trenddiv>div>div>img{
-            width:100%;
-        }
-        #trenddiv{
-            width:80%;
-            margin:auto;
-        }
-        #footf{
-            display:flex;
-        }
-        #footf a{
-            text-decoration:none;
-        }
-        #footer>div{
-            width:80%;
-            margin:auto;
-            text-align: center;
-        }
-        #footer{
-            background-color: #F1F6FC;
-        }
-        #cyc>div>img,#cyc2>div>img{
-            height:60%;
-            width:100%;
-        }
-        #cyc>div>h5{
-            text-decoration: line-through;
-        }
-        #cyc,#cyc2{
-            width:99%;
-            border:1px solid none;
-            height:auto;
-            display:flex;
-            justify-content:space-evenly;
-        }
-        #cyc>div>*,#cyc2>div>*{
-            margin:8px 0px;
-            padding:0px;
-        }
-        #cyc>div,#cyc2>div{
-           width:20%; 
-           border:1px solid none;;
-            
-        }
-        #newforyou{
-            width:78%;
-            margin:20px auto;
-            background-color:aliceblue ;
-        }
-        #tri{
-            width:100%;
-            display:flex;
-            justify-content: space-evenly;
-            
-        }
-        #tri>div{
-            width:17%;
-            background-color: white;
-            margin:8px;
-        }
-        #tri>div>h5{
-            text-decoration: line-through;
-        }
-        #tri>div>img{
-            width:100%;
-        }
-        #delgd{
-            width:80%;
-            margin:30px auto;
-            display:grid;
-            grid-template-columns: repeat(6,1fr);
-            gap:15px;
-        }
-        #delgd>div>img{
-            width:100%;
-        }
-        #delgd>div{
-            padding:10px;
-            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-        }
-        .dod{
-            font-size: 18px;
-            color:#2e2f32;
-        }
-        #land>*{
-            padding:20px;
-        }
-        #delgd2{
-            width:80%;
-            margin:auto;
-        }
-        #delgdcld2>*{
-            margin:8px 0px;
-        }
-        #singlewin{
-            display:flex;
-            justify-content:space-evenly;
-            width:70%;
-            margin:40px auto
-        }
-        #singlewin>div{
-                width:50%;
-                height:300px;
-        }
-        #singlewin>div:nth-child(1) img{
-            width:60%;
-        }
-        #flow{
-            position:relative;
-            cursor: pointer; 
-            border:2px solid white;
-            padding:5px 5px 0px 5px;
-            border-radius: 10px 10px 0px 0px; 
-            background-color: #2677e8;         
-        }
-        .dropdown{
-            position:absolute;
-            color:black;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            background-color: #F1F6FC;
-        }
-        .dropdown>li{
-            display:none;
-            width:300px;
-            padding:5px;
-        }
-        #flow:hover > .dropdown li{
-            display:block;
-        }
-        #midnav>a>img{
-            height:22px;;
-            width:22px;
-        }
-    </style>
+    <link rel="stylesheet" href="./styles/indexstyle.css">
 </head>
 <body>
     <div class="navbar">
@@ -253,7 +24,7 @@
                 <option value="">All Categories</option>
                 <option value="">Smart home & Garden</option>
             </select>
-            <input type="text">
+            <input id="searchbox" type="text">
             <span>
                 <span>Ship to</span>
                 <span class="flag" countrycode="IN"></span>/INR
@@ -334,6 +105,70 @@
         
                 </div>
             </div>
+            <div id="enjoylife">
+                <div id="enjoylife1">
+                    <h1>Enjoy life</h1><br>
+                    <img src="https://img.gkbcdn.com/bn/2209/500x632-63326e5e2b40c9222cacb303._p1_.jpg" alt="">  
+                </div>
+                <div>
+                    <div id="enjoylife2">
+                        <div class="light">
+                            <h3 class="nnw">Go outside for fun and health</h3>
+                            <div id="cycle">
+                                <div>
+                                    <img src="https://img.gkbcdn.com/bn/2209/210x2107-63326fb32b40c9222cacb304._p1_.jpg" alt="">
+                                    <p>Premium e-mobility</p>
+                                </div>
+                                <div>
+                                    <img src="https://img.gkbcdn.com/bn/2205/210x2104-62902c152b40c91cb09e7ada._p1_.jpg" alt="">
+                                    <p>Cost-effective commuting</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="light">
+                            <h3 class="nnw">Unleash maximum productivity</h3>
+                            <div id="cycle2">
+                                <div>
+                                    <img src="https://img.gkbcdn.com/bn/2209/210x2106-633270272b40c9222cacb305._p1_.jpg" alt="">
+                                    <p>Get the laptops you need</p>
+                                </div>
+                                <div>
+                                    <img src="https://img.gkbcdn.com/bn/2209/210x2101-6332707e2b40c9222cacb306._p1_.jpg" alt="">
+                                    <p>Create your workspace</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="light">
+                            <h3 class="nnw">Let's play together</h3>
+                            <div id="cycle3">
+                                <div>
+                                    <img src="https://img.gkbcdn.com/bn/2209/210x2102-633270c32b40c9222cacb307._p1_.jpg" alt="">
+                                    <p>Smart tech for cleaning</p>
+                                </div>
+                                <div>
+                                    <img src="https://img.gkbcdn.com/bn/2209/210-633271172b40c9222cacb308._p1_.jpg" alt="">
+                                    <p>Easy pet cleanup</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="light">
+                            <h3 class="nnw">Easy & efficient home solutions</h3>
+                            <div id="cycle4">
+                                <div>
+                                    <img src="https://img.gkbcdn.com/bn/2209/210x2105-633272852b40c9222cacb30a._p1_.jpg" alt="">
+                                    <p>game consoles</p>
+                                </div>
+                                <div>
+                                    <img src="https://img.gkbcdn.com/bn/2209/210x2104-633272352b40c9222cacb309._p1_.jpg" alt="">
+                                    <p>portable outdoor speakers</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="delgd" >
 
@@ -344,8 +179,8 @@
     </divi>
     <div id="footer">
         <div>
-            <div><h1>Why buy from shopfrog?</h1></div>
-            <div>
+            <div class="ttc"><h1>Why buy from shopfrog?</h1></div>
+            <div class="ttc">
                 <input type="text">
                 <input type="submit">
             </div>
@@ -377,6 +212,35 @@
                     <a href=""><li>Declaration</li></a>
                     <a href=""><li>Customs</li></a>
                 </ul>
+                <div>
+                    <p>Download the App</p>
+                    <div id="pairqr">
+                        <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/android_app.png" alt="">
+                        <div id="qrdiv">
+                            <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/app_store.jpg" alt="">
+                            <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/google_play.jpg" alt="">
+                            <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/gallery.jpg" alt="">
+                        </div>
+                    </div>
+                    <p>connect with us</p>
+                    <div class="minfoot">
+                        <img src="https://cdn-icons-png.flaticon.com/128/20/20837.png" alt="">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1077/1077046.png" alt="">
+                        <img src="https://cdn-icons-png.flaticon.com/128/2111/2111708.png" alt="">
+                        <img src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png" alt="">
+                        <img src="https://cdn-icons-png.flaticon.com/128/733/733635.png" alt="">
+                        <img src="https://cdn-icons-png.flaticon.com/128/3046/3046120.png" alt="">
+
+                    </div>
+                </div>
+                <div class="minfoot">
+                    <div><img src="https://cdn-icons-png.flaticon.com/128/542/542689.png" alt=""><p>Service_spayments</p></div>
+                    <div><img src="https://cdn-icons-png.flaticon.com/128/2067/2067046.png" alt=""><p>Tickets</p></div>
+                    <div><img src="https://cdn-icons-png.flaticon.com/128/4526/4526832.png" alt=""><p>Live chat</p></div>
+                </div>
+            </div>
+            <div class="ttsfoot">
+                <img src="./imgs/foot_icon.png" alt="">
             </div>
         </div>
     </div>
@@ -385,315 +249,4 @@
     </div>
 </body>
 </html>
-<script>
-    // fetch("https://recommender.scarabresearch.com/merchants/116571D43669AB19/?pv=353371885&xp=1&f=f%3APERSONAL%2Cl%3A8%2Co%3A0&cp=1&vi=64E2415F88EC3EF&p=25517%7C1667909828")
-    // .then((res)=>res.json())
-    // .then((res)=>{
-    //     let a=res.features.PERSONAL.items;
-    //     let b=res.products;
-    //         display(a,b);
-    // });
-    fetch("./dealdata.json")
-    .then((rs)=>rs.json())
-    .then((da)=>display(da.dealdata));
-
-
-    fetch("./run_results.json")
-    .then((rs)=>rs.json())
-    .then((da)=>displaycopy(da.outdoor_products));
-
-
-    fetch("https://recommender.scarabresearch.com/merchants/116571D43669AB19/?pv=356248641&xp=1&f=f%3ARELATED%2Cl%3A5%2Co%3A0%7Cf%3AALSO_BOUGHT%2Cl%3A5%2Co%3A0&v=i%3A17662%2Ct%3APERSONAL%2Cc%3AAAAA&cp=1&vi=64E2415F88EC3EF&p=25517%7C1667909828&prev_url=https%3A%2F%2Fwww.geekbuying.com%2F")
-    .then((res)=>res.json())
-    .then((res)=>{
-        let a=res.features.RELATED.items;
-        let b=res.products;
-            display2(a,b);
-    });
-    // function display(a,b){
-    //     var iddata=[];
-    //     for(let i=0;i<8;i++){
-    //         iddata.push(a[i].id);
-    //     }
-    //     iddata.forEach(ele => {
-    //         let d=document.createElement("div")
-    //         let i=document.createElement("img")
-    //         i.src=b[ele][3];
-    //         let h=document.createElement("h4")
-    //         h.innerText=b[ele][6];
-    //         let c=document.createElement("h5")
-    //         c.innerText=b[ele][7];
-    //         d.append(i,h,c)
-    //         document.querySelector("#cyc").append(d)
-
-    //     });
-    // }
-    function display(a){
-        var iddata=[];
-        for(let i=0;i<4;i++){
-            iddata.push(a[i]);
-        }
-        iddata.forEach(ele => {
-            let d=document.createElement("div")
-            d.addEventListener("click",dealspage);
-            let i=document.createElement("img")
-            i.src=ele.img;
-            let h=document.createElement("h4")
-            h.innerText=ele.discount;
-            let c=document.createElement("h5")
-            c.innerText=ele.price;
-            d.append(i,h,c)
-            document.querySelector("#cyc").append(d)
-
-        });
-    }
-    function displaycopy(a){
-        
-        var iddata=[];
-        for(let i=0;i<4;i++){
-            iddata.push(a[i]);
-        }
-        iddata.forEach(ele => {
-            let d=document.createElement("div")
-            d.addEventListener("click",()=>{
-                displaypro(ele);
-            })
-            let i=document.createElement("img")
-            i.src=ele.img;
-            let pa=document.createElement("p")
-            pa.innerText=ele.name.substr(0,10);
-            let c=document.createElement("h5")
-            c.innerText=ele.price.substr(0,7);
-            d.append(i,pa,c)
-            document.querySelector("#cyc2").append(d)
-
-        });
-    }
-
-    function display2(a,b){
-        var iddata2=[];
-        for(let i=0;i<5;i++){
-            iddata2.push(a[i].id);
-        }
-        iddata2.forEach(ele => {
-            let d=document.createElement("div")
-            let i=document.createElement("img")
-            i.src=b[ele][3];
-            let h=document.createElement("h4")
-            h.innerText=b[ele][6];
-            let c=document.createElement("h5")
-            c.innerText=b[ele][7];
-            d.append(i,h,c)
-            document.querySelector("#tri").append(d)
-
-        });
-    }
-    var sliderarr=[
-        "https://img.gkbcdn.com/s3/bn/2211/740x670-636b8aec2b40c926007db2b0.jpg",
-        "https://img.gkbcdn.com/bn/2211/740x670-6369b73f2b40c95728c3e707._p1_.jpg",
-        "https://img.gkbcdn.com/bn/2211/740x670-636382c52b40c94424fc21e0._p1_.jpg",
-        "https://img.gkbcdn.com/bn/2210/740x670-635f8c012b40c90c8c92734d._p1_.jpg",
-        "https://img.gkbcdn.com/bn/2211/740x670-63647bec2b40c94fac2af423._p1_.jpg",
-        "https://img.gkbcdn.com/bn/2211/740x670-63647c282b40c94fac2af425._p1_.jpg",
-        "https://img.gkbcdn.com/bn/2211/740x670-63647ba22b40c94fac2af421._p1_.jpg",
-        "https://img.gkbcdn.com/bn/2211/740x670-636328c82b40c92ed8b1d35e._p1_.jpg"
-    ]
-    var i=-1;
-    setInterval(sld,4000);
-    sld();
-    
-    function sld(){
-        if(i<sliderarr.length-1){
-            i++;
-        }
-        else{
-            i=0;
-        }
-        var sscld=document.querySelector("#slider>img");
-        sscld.src=sliderarr[i];
-        sscld.addEventListener("click",dealspage);
-    }
-
-    // setTimeout(() => {
-    //     dealspage();
-    // }, 4000);
-    function dealspage(){
-        document.querySelector("#land").innerHTML="";
-        fetch("./dealdata.json")
-        .then((res) => res.json())
-        .then((data)=>dd(data.dealdata))
-
-        function dd(data){
-            let hhh=document.createElement("h1");
-                hhh.innerText="Flash Deals";
-                hhh.style="margin-left:45%"
-            document.querySelector("#land").append(hhh);
-            data.forEach(function(ele){
-                var griddiv=document.createElement("div");
-                griddiv.addEventListener("click",()=>{
-                        displaypro(ele);
-                })
-
-                var ig=document.createElement("img");
-                ig.src=ele.img;
-                var h4=document.createElement("h4");
-                h4.innerText=ele.name.substr(0,48);
-                h4.style="font-size:14px"
-                var h3=document.createElement("h3");
-                h3.innerText=ele.price;
-                h3.style="color:#D81414;font-size:18px"
-                var sp=document.createElement("span")
-                sp.innerText=ele.mrp;
-                sp.style="text-decoration:line-through;display:block";
-                var dis=document.createElement("h6")
-                dis.innerText=ele.discount;
-                dis.style="padinng:10px;background-color:red;display:inline;font-size:18px"
-               
-
-
-                griddiv.append(ig,h4,h3,sp,dis);
-                
-               
-                document.querySelector("#delgd").append(griddiv);
-            })
-           
-        }
-       
-    }
-    let ww=document.querySelectorAll("#flow>.dropdown>li");
-    for(let i=0;i<4;i++){
-        ww[i].addEventListener("click",()=>{
-            (i==0)? allcatpage("./ware1.json",i):
-           (i==1)? allcatpage(("./run_results.json"),i):
-           (i==2)? allcatpage(("./run_results.json"),i)
-           :null;
-            
-        })
-    }
-    
-    function allcatpage(url,type){
-        document.querySelector("#land").innerHTML="";
-        fetch(url)
-        .then((res) => res.json())
-        .then((data)=>{
-            if(type==0) dd(data.AAA);
-            if(type==1) dd(data.outdoor_products);
-            if(type==2) dd(data.exercise_products)
-        });
-
-        function dd(data){
-            document.querySelector("#delgd").innerHTML="";
-            document.querySelector("#land").innerHTML="";
-            document.querySelector("#delgd2").innerHTML="";
-            data.forEach(function(ele){
-                var griddiv=document.createElement("div");
-                griddiv.addEventListener("click",()=>{
-                        displaypro(ele);
-                })
-
-                var ig=document.createElement("img");
-                ig.src=ele.img;
-                var h4=document.createElement("h4");
-                h4.innerText=ele.name.substr(0,48);
-                h4.style="font-size:14px"
-                var h3=document.createElement("h3");
-                h3.innerText=ele.price.substr(0,7);
-                h3.style="color:#D81414;font-size:18px"
-                var sp=document.createElement("span")
-                sp.innerText=ele.mrp;
-                sp.style="text-decoration:line-through;display:block";
-                griddiv.append(ig,h4,h3,sp);
-                
-               
-                document.querySelector("#delgd").append(griddiv);
-            })
-           
-        }
-       
-    }
-    displaypro=(e)=>{
-            document.querySelector("#delgd").innerHTML="";
-            document.querySelector("#land").innerHTML="";
-            document.querySelector("#delgd2").innerHTML="";
-            var d=document.createElement("div");
-            d.setAttribute("id","singlewin");
-            var div1=document.createElement("div");
-            var div2=document.createElement("div");
-            div2.id="delgdcld2";
-            let i=document.createElement("img");
-            i.src=e.img;
-            let hed=document.createElement("h3");
-            hed.innerText=e.name;
-            let pr=document.createElement("h2");
-            pr.innerText=e.price.substr(0,7) || e.mrp;
-            let mrps=document.createElement("span");
-            mrps.innerText=e.mrp;
-            mrps.style="text-decoration:line-through"
-            let dis=document.createElement("p");
-            dis.innerText=e.discount || "Nodiscount";
-            dis.style="color:blue"
-            let qt=document.createElement("span");
-            qt.innerText="QTY:";
-            qt.style="margin-right:30px"
-            let scop=document.createElement("input");
-            scop.type=Number;
-            scop.value=1;
-            let mi=document.createElement("button");
-            mi.innerHTML="-";
-            mi.style="width:20px"
-            mi.addEventListener("click",()=>{
-                if(scop.value>1){
-                    scop.value--;
-                }
-            })
-            scop.style="width:20px;"
-            let ma=document.createElement("button");
-            ma.innerHTML="+";
-            ma.style="width:20px"
-            ma.addEventListener("click",()=>{
-                scop.value++;
-            })
-            let atc=document.createElement("button");
-            atc.innerHTML="Add to cart";
-            atc.style="margin-right:20px;padding:5px"
-            atc.addEventListener("click",()=>{
-                var arr=JSON.parse(localStorage.getItem("shopfrogcart")) || [];
-                e.qty=scop.value;
-                let ab=e.img;
-                let bc=e.name;
-                let cd=e.price || e.mrp;
-                let de=e.qty;
-                
-                
-
-                let obj={ab,bc,cd,de};
-                let prom=new Promise((res,rej)=>{
-                    arr.forEach((ele)=>{
-                        if(bc==ele.bc){
-                            rej("Product already in Cart");
-                        }
-                    })
-                    res();
-                })
-                .then((res)=>{
-                    alert("added to cart");
-                    arr.push(obj);
-                    localStorage.setItem("shopfrogcart",JSON.stringify(arr));
-                })
-                .catch((rest)=>alert(rest));
-            })
-            let by=document.createElement("button");
-            by.innerHTML="Buy Now";
-            by.style="margin-right:20px;padding:5px"
-            let r=document.createElement("br");
-
-
-            div1.append(i);
-            div2.append(hed,pr,mrps,dis,qt,mi,scop,ma,r,atc,by)
-            d.append(div1,div2);
-            document.querySelector("#delgd2").append(d);
-
-    }
-    var products_bike_api="https://recommender.scarabresearch.com/merchants/116571D43669AB19/?pv=353371885&xp=1&f=f%3APERSONAL%2Cl%3A8%2Co%3A0&cp=1&vi=64E2415F88EC3EF&p=25517%7C1667909828";
-    var timmer_api="https://recommender.scarabresearch.com/merchants/116571D43669AB19/?pv=356248641&xp=1&f=f%3ARELATED%2Cl%3A5%2Co%3A0%7Cf%3AALSO_BOUGHT%2Cl%3A5%2Co%3A0&v=i%3A17662%2Ct%3APERSONAL%2Cc%3AAAAA&cp=1&vi=64E2415F88EC3EF&p=25517%7C1667909828&prev_url=https%3A%2F%2Fwww.geekbuying.com%2F";
-</script>
+<script src="./scripts/indexjs.js"></script>
