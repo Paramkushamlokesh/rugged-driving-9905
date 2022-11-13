@@ -25,7 +25,7 @@ ul{
     height:auto;
     width:100%;
     padding:15px;
-    font-size: 22px
+    font-size: 22px;
 }
 #midnav>img{
     width:50%;
@@ -34,7 +34,7 @@ ul{
 }
 #midnav>a{
     text-decoration: none;
-    margin:0px 30px;
+    margin:0px 60px;
 }
 #midnav>h1>a{
     
@@ -297,4 +297,60 @@ ul{
     display:block;
     width:80%;
     margin:10px auto;
+}
+#allcat,#searchbox{
+    font-size: 18px;
+    padding:5px;
+}
+#searchbox{
+    margin-right:60px;
+}
+
+@media all and (min-width:550px) and (max-width:700px) {
+    #delgd{
+        grid-template-columns: repeat(4,1fr);
+    }
+    #mid{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    #tri{
+        width:100%;
+        flex-direction: column;
+    }
+    #tri>div{
+        width:50%;
+    }
+    #enjoylife{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    #enjoylife2{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+    }
+}
+@media all and  (max-width:549px) {
+    #delgd{
+        grid-template-columns: repeat(3,1fr);
+    }
+    #mid{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    #tri{
+        width:100%;
+        flex-direction: column;
+    }
+    #tri>div{
+        width:50%;
+    }
+    #enjoylife{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    #enjoylife2{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+    }
 }

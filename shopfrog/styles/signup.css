@@ -11,6 +11,15 @@ form>a>img{
         background-color: #2887FD;
         height:100px;
 }
+#nav>h1{
+    color:white;
+    text-align: center;
+    padding:20px 0px;
+}
+#nav>h1>a{
+    text-decoration: none;
+    color:white;
+}
 form{
     background-color: white;
     margin:auto;

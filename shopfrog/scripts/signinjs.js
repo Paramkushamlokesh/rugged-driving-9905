@@ -18,6 +18,7 @@ document.querySelector("#cna").addEventListener("click",clickinner);
             arr.filter((ele)=>{
             if(ele.Re==Email_address){
                 if(ele.Rp==Password){
+                    localStorage.setItem("shopfroglogincred",Email_address);
                     res("Login Sucessful");
                 }
                 else{
@@ -29,6 +30,10 @@ document.querySelector("#cna").addEventListener("click",clickinner);
             }
             })
         })
-        .then((result)=>alert(result))
+        .then((result)=>{
+            alert(result);
+            
+            location.href='./index.html';
+        })
         .catch((result)=>alert(result));   
     }

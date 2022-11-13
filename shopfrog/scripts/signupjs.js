@@ -4,9 +4,6 @@ document.querySelector("form").addEventListener("submit",(e)=>{
 });
 let arr=JSON.parse(localStorage.getItem("shopfrogUD")) || []
 function sub(){
-    
-    
-    console.log("hello");
     var int=document.querySelectorAll("input");
     let nickname=int[0].value;
     let Email_address=int[1].value;
@@ -17,5 +14,6 @@ function sub(){
         Rp: Password
     };
     arr.push(obj);
+    alert("user."+" "+int[1].value+" "+"created successful");
     localStorage.setItem("shopfrogUD",JSON.stringify(arr));
 }

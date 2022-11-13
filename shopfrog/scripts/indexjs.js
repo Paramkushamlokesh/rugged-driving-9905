@@ -1,3 +1,14 @@
+let scred=localStorage.getItem("shopfroglogincred") || "Sign In";
+
+let xs=document.querySelector("#midnav>a");
+xs.innerText=scred;
+
+
+
+
+
+
+
 fetch("./dealdata.json")
     .then((rs)=>rs.json())
     .then((da)=>display(da.dealdata));
@@ -64,6 +75,16 @@ fetch("./dealdata.json")
         }
         iddata2.forEach(ele => {
             let d=document.createElement("div")
+            d.addEventListener("click",()=>{
+                let obj={
+                   name:b[ele][1],
+                   img:b[ele][3],
+                   price:"$"+b[ele][6],
+                   mrp:"$"+b[ele][7],
+                   discount:"avaliable"
+                }
+                displaypro(obj);
+            })
             let i=document.createElement("img")
             i.src=b[ele][3];
             let h=document.createElement("h4")
@@ -130,13 +151,8 @@ fetch("./dealdata.json")
                 sp.style="text-decoration:line-through;display:block";
                 var dis=document.createElement("h6")
                 dis.innerText=ele.discount;
-                dis.style="padinng:10px;background-color:red;display:inline;font-size:18px"
-               
-
-
+                dis.style="padinng:10px;background-color:red;display:inline;font-size:18px";
                 griddiv.append(ig,h4,h3,sp,dis);
-                
-               
                 document.querySelector("#delgd").append(griddiv);
             })
            
@@ -153,9 +169,12 @@ fetch("./dealdata.json")
             
         })
     }
+    document.querySelector("#allcat").addEventListener("change",()=>{
+        allcatpage(("./run_results.json"),7);
+    })
     document.querySelector("#searchbox").addEventListener("input",()=>{
-        
-        fetch("./run_results.json")
+        if(document.querySelector("#searchbox").value.length>2){
+            fetch("./run_results.json")
         .then((rs)=>rs.json())
         .then((da)=>{
             let srch=document.querySelector("#searchbox").value.toLowerCase();
@@ -169,6 +188,7 @@ fetch("./dealdata.json")
             })
             dd(newiarr);
         });
+        }
     });
     function allcatpage(url,type){
         document.querySelector("#land").innerHTML="";
@@ -177,7 +197,8 @@ fetch("./dealdata.json")
         .then((data)=>{
             if(type==0) dd(data.AAA);
             if(type==1) dd(data.outdoor_products);
-            if(type==2) dd(data.exercise_products)
+            if(type==2) dd(data.exercise_products);
+            if(type==7) dd(data.Allcat)
         });
     }
         function dd(data){
@@ -215,6 +236,7 @@ fetch("./dealdata.json")
        
     
     displaypro=(e)=>{
+    
             document.querySelector("#delgd").innerHTML="";
             document.querySelector("#land").innerHTML="";
             document.querySelector("#delgd2").innerHTML="";
